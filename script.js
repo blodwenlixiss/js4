@@ -15,7 +15,12 @@
 //  ამ კოდის შესაბამის სიმბოლოს ($, €, ლ) თუ ისეთი
 // კოდს გადავცემ რომლის სიმბოლოც არ მაქვს დააბრუნოს კოდი.
 
-// const currency = "5 EUR";
+// const currency = "EUR";
+
+// აქ უბრალოდ გავაკეთე თუ ვალუტის წინ იქნებოდა რაოდენობა
+//      ის რაოდენობა დარჩენილიყო და მხოლოდ ბოლო ვალუტა შეცვლილიყო
+//          სიმბოლოებით.
+
 // let currencyArr = currency.split(" ");
 // const getCurrencySymbolFromCode = function (currency) {
 //   for (let i = 0; i < currencyArr.length; i++) {
@@ -34,9 +39,26 @@
 //     }
 //   }
 // };
-// getCurrencySymbolFromCode(currencyArr);
-// let finalCurrency = currencyArr.join("");
-// console.log(finalCurrency);
+
+//  ეს უბრალოდ დავალება
+
+// const getCurrencySymbolFromCode = function (currency) {
+//   switch (currency) {
+//     case "USD":
+//       currency = "$";
+//       break;
+//     case "EUR":
+//       currency = "€";
+//       break;
+//     case "GEL":
+//       currency = "₾";
+//       break;
+//     default:
+//       currency;
+//   }
+//   return currency;
+// };
+// console.log(getCurrencySymbolFromCode(currency));
 
 // 3. დაწერეთ ფუნქცია, რომელიც მიიღებს lowerCase სტრინგს
 //  მაგ (my name is joe) და დააბრუნებს UpperCase
@@ -74,10 +96,10 @@
 //  name === ფუნქციის მეორე პარამეტრს და დავაბრუნოთ ნაპოვნი ობიექტი.
 
 // const objArr = [{ name: "nika" }, { name: "luka" }];
-// const rame = function (arr, name) {
-//   return arr.find((item) => item.name === name);
+// const findName = function (arr, name) {
+// return arr.find((item) => item.name === name);
 // };
-// console.log(rame(objArr, "luka"));
+// console.log(findName(objArr, "luka"));
 
 // დამატებითი დავალება:
 
@@ -109,9 +131,9 @@
 // <li>მასივის ელემენტი</li>
 // </ul>
 
-// let ulList = document.createElement("ul");
 // const arr = [1, 2, 3, 4, 5];
 // function createList(arr) {
+//   let ulList = document.createElement("ul");
 //   for (let i = 0; i < arr.length; i++) {
 //     let liList = document.createElement("li");
 //     liList.append(arr[i]);
